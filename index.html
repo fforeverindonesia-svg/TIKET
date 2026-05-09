@@ -318,6 +318,19 @@ overflow:hidden;
 transition:.5s;
 }
 
+.ticket-card::before{
+content:'';
+position:absolute;
+inset:0;
+background:linear-gradient(45deg,transparent,rgba(255,200,0,.14),transparent);
+transform:translateX(-100%);
+transition:1s;
+}
+
+.ticket-card:hover::before{
+transform:translateX(100%);
+}
+
 .ticket-card:hover{
 transform:translateY(-15px) scale(1.03);
 border-color:var(--gold);
@@ -347,6 +360,20 @@ color:#ddd;
 line-height:1.7;
 }
 
+/* BADGE */
+.badge{
+position:absolute;
+top:20px;
+right:-55px;
+background:var(--red);
+padding:10px 70px;
+transform:rotate(45deg);
+font-size:13px;
+font-weight:700;
+box-shadow:0 0 25px rgba(255,0,0,.5);
+}
+
+/* FOOTER */
 footer{
 padding:90px 20px;
 text-align:center;
@@ -368,6 +395,7 @@ line-height:1.9;
 color:#aaa;
 }
 
+/* RESPONSIVE */
 @media(max-width:900px){
 
 .hero h1{
@@ -407,6 +435,14 @@ letter-spacing:4px;
 font-size:34px;
 }
 
+.ticket-card{
+padding:30px 25px;
+}
+
+.price{
+font-size:34px;
+}
+
 }
 
 </style>
@@ -419,6 +455,7 @@ font-size:34px;
 <div class="glow one"></div>
 <div class="glow two"></div>
 
+<!-- NAVBAR -->
 <nav>
 
 <div class="logo">WESTLIFE 25</div>
@@ -431,6 +468,7 @@ font-size:34px;
 
 </nav>
 
+<!-- HERO -->
 <section class="hero">
 
 <div class="hero-content">
@@ -489,8 +527,13 @@ ORDER NOW
 
 <div class="ticket-grid">
 
+<!-- VIP -->
 <div class="ticket-card">
+
+<div class="badge">HOT</div>
+
 <h3>VIP PACKAGE</h3>
+
 <div class="price">IDR 2.750.000</div>
 
 <ul>
@@ -507,8 +550,11 @@ GET VIP
 
 </div>
 
+<!-- CAT 1 -->
 <div class="ticket-card">
+
 <h3>CAT 1 A & B</h3>
+
 <div class="price">IDR 2.500.000</div>
 
 <ul>
@@ -523,10 +569,103 @@ BUY NOW
 
 </div>
 
+<!-- CAT 2 -->
+<div class="ticket-card">
+
+<h3>CAT 2 A & B</h3>
+
+<div class="price">IDR 2.250.000</div>
+
+<ul>
+<li>✓ Excellent Visibility</li>
+<li>✓ Comfortable Seating</li>
+<li>✓ Official Access</li>
+</ul>
+
+<a href="https://fforeverindonesia-svg.github.io/FROM-PEMBELIAN-WESTLIFE/" class="btn btn-gold">
+BUY NOW
+</a>
+
+</div>
+
+<!-- CAT 3 -->
+<div class="ticket-card">
+
+<h3>CAT 3 A & B</h3>
+
+<div class="price">IDR 1.850.000</div>
+
+<ul>
+<li>✓ Great Concert Experience</li>
+<li>✓ Official Seating</li>
+<li>✓ Crowd Atmosphere</li>
+</ul>
+
+<a href="https://fforeverindonesia-svg.github.io/FROM-PEMBELIAN-WESTLIFE/" class="btn btn-gold">
+BUY NOW
+</a>
+
+</div>
+
+<!-- CAT 4 -->
+<div class="ticket-card">
+
+<h3>CAT 4 A & B</h3>
+
+<div class="price">IDR 1.450.000</div>
+
+<ul>
+<li>✓ Side View Seating</li>
+<li>✓ Limited Availability</li>
+</ul>
+
+<a href="https://fforeverindonesia-svg.github.io/FROM-PEMBELIAN-WESTLIFE/" class="btn btn-gold">
+BUY NOW
+</a>
+
+</div>
+
+<!-- CAT 5 -->
+<div class="ticket-card">
+
+<h3>CAT 5 A & B</h3>
+
+<div class="price">IDR 1.250.000</div>
+
+<ul>
+<li>✓ Festival Atmosphere</li>
+<li>✓ Official Seating</li>
+</ul>
+
+<a href="https://fforeverindonesia-svg.github.io/FROM-PEMBELIAN-WESTLIFE/" class="btn btn-gold">
+BUY NOW
+</a>
+
+</div>
+
+<!-- CAT 6 -->
+<div class="ticket-card">
+
+<h3>CAT 6 A & B</h3>
+
+<div class="price">IDR 850.000</div>
+
+<ul>
+<li>✓ Budget Friendly</li>
+<li>✓ Official Access</li>
+</ul>
+
+<a href="https://fforeverindonesia-svg.github.io/FROM-PEMBELIAN-WESTLIFE/" class="btn btn-gold">
+BUY NOW
+</a>
+
+</div>
+
 </div>
 
 </section>
 
+<!-- FOOTER -->
 <footer id="footer">
 
 <h2>WESTLIFE WORLD TOUR 2027</h2>
