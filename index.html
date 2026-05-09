@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>WESTLIFE TICKET CATEGORY 2027</title>
+<title>WESTLIFE FINAL PROMAX 2027</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,15 +20,15 @@ scroll-behavior:smooth;
 
 :root{
 --gold:#ffcb73;
---gold2:#ff8c00;
+--gold2:#ff9100;
 --dark:#050505;
---red:#d72626;
---white:#fff;
+--red:#ff2f2f;
+--glass:rgba(255,255,255,.06);
 }
 
 body{
-background:#000;
 font-family:'Poppins',sans-serif;
+background:#000;
 color:#fff;
 overflow-x:hidden;
 }
@@ -39,15 +39,15 @@ content:'';
 position:fixed;
 inset:0;
 background:
-linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.95)),
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.95)),
 url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=2070&auto=format&fit=crop');
 background-size:cover;
 background-position:center;
-z-index:-3;
-animation:bgZoom 18s infinite alternate;
+z-index:-5;
+animation:bgzoom 20s infinite alternate;
 }
 
-@keyframes bgZoom{
+@keyframes bgzoom{
 from{
 transform:scale(1);
 }
@@ -62,14 +62,14 @@ position:fixed;
 width:100%;
 height:100%;
 overflow:hidden;
-z-index:-2;
+z-index:-3;
 }
 
 .particles span{
 position:absolute;
 width:4px;
 height:4px;
-background:rgba(255,180,0,.8);
+background:rgba(255,180,0,.9);
 border-radius:50%;
 animation:particle 12s linear infinite;
 }
@@ -83,7 +83,7 @@ opacity:0;
 opacity:1;
 }
 100%{
-transform:translateY(-10vh) scale(1.5);
+transform:translateY(-10vh) scale(1.8);
 opacity:0;
 }
 }
@@ -93,8 +93,8 @@ opacity:0;
 position:fixed;
 border-radius:50%;
 filter:blur(120px);
-z-index:-1;
-opacity:.3;
+opacity:.35;
+z-index:-2;
 }
 
 .glow.one{
@@ -125,8 +125,9 @@ justify-content:space-between;
 align-items:center;
 background:rgba(0,0,0,.35);
 backdrop-filter:blur(14px);
-z-index:999;
 border-bottom:1px solid rgba(255,255,255,.08);
+z-index:999;
+transition:.4s;
 }
 
 .logo{
@@ -168,10 +169,10 @@ position:relative;
 
 .hero-content{
 max-width:1200px;
-animation:fadeUp 1.5s ease;
+animation:fadeup 1.5s ease;
 }
 
-@keyframes fadeUp{
+@keyframes fadeup{
 from{
 opacity:0;
 transform:translateY(80px);
@@ -183,9 +184,9 @@ transform:translateY(0);
 }
 
 .hero h4{
-font-size:22px;
 letter-spacing:10px;
 color:var(--gold);
+font-size:22px;
 margin-bottom:20px;
 }
 
@@ -197,10 +198,10 @@ background:linear-gradient(to bottom,#fff,var(--gold));
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 text-shadow:0 0 30px rgba(255,180,0,.6);
-animation:glowText 4s infinite alternate;
+animation:glowtext 4s infinite alternate;
 }
 
-@keyframes glowText{
+@keyframes glowtext{
 from{
 filter:drop-shadow(0 0 10px rgba(255,180,0,.4));
 }
@@ -223,7 +224,6 @@ color:#ddd;
 font-size:18px;
 }
 
-/* BUTTONS */
 .hero-buttons{
 margin-top:40px;
 display:flex;
@@ -256,18 +256,6 @@ transform:translateY(-6px) scale(1.05);
 box-shadow:0 20px 60px rgba(255,180,0,.7);
 }
 
-.btn-outline{
-border:2px solid var(--gold);
-background:transparent;
-color:#fff;
-}
-
-.btn-outline:hover{
-background:var(--gold);
-color:#000;
-transform:translateY(-6px);
-}
-
 /* SECTION */
 section{
 padding:110px 8%;
@@ -290,20 +278,13 @@ color:#bbb;
 }
 
 /* LAYOUT */
-.layout-container{
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
 .layout-box{
-width:100%;
 max-width:1300px;
+margin:auto;
 border-radius:35px;
 overflow:hidden;
 border:2px solid rgba(255,255,255,.08);
 box-shadow:0 25px 80px rgba(0,0,0,.7);
-position:relative;
 transition:1s;
 }
 
@@ -317,19 +298,19 @@ width:100%;
 display:block;
 }
 
-/* TICKET GRID */
+/* TICKET */
 .ticket-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:35px;
 margin-top:60px;
 }
 
 .ticket-card{
-background:rgba(255,255,255,.04);
+background:var(--glass);
 border:1px solid rgba(255,255,255,.08);
 backdrop-filter:blur(15px);
-border-radius:30px;
+border-radius:35px;
 padding:40px 30px;
 position:relative;
 overflow:hidden;
@@ -340,7 +321,7 @@ transition:.5s;
 content:'';
 position:absolute;
 inset:0;
-background:linear-gradient(45deg,transparent,rgba(255,200,0,.12),transparent);
+background:linear-gradient(45deg,transparent,rgba(255,200,0,.14),transparent);
 transform:translateX(-100%);
 transition:1s;
 }
@@ -356,7 +337,7 @@ box-shadow:0 20px 70px rgba(255,180,0,.18);
 }
 
 .ticket-card h3{
-font-size:32px;
+font-size:34px;
 color:var(--gold);
 margin-bottom:20px;
 }
@@ -369,7 +350,7 @@ margin-bottom:20px;
 
 .ticket-card ul{
 list-style:none;
-margin-bottom:30px;
+margin-bottom:25px;
 }
 
 .ticket-card ul li{
@@ -378,13 +359,47 @@ color:#ddd;
 line-height:1.7;
 }
 
+/* COUNTER */
+.counter-box{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:15px;
+margin-bottom:30px;
+}
+
+.counter-btn{
+width:55px;
+height:55px;
+border:none;
+border-radius:50%;
+font-size:28px;
+font-weight:700;
+cursor:pointer;
+background:linear-gradient(to right,var(--gold),var(--gold2));
+color:#000;
+transition:.3s;
+}
+
+.counter-btn:hover{
+transform:scale(1.1);
+}
+
+.counter-number{
+font-size:34px;
+font-weight:800;
+width:60px;
+text-align:center;
+color:var(--gold);
+}
+
 /* BADGE */
 .badge{
 position:absolute;
 top:20px;
-right:-50px;
+right:-55px;
 background:var(--red);
-padding:10px 60px;
+padding:10px 70px;
 transform:rotate(45deg);
 font-size:13px;
 font-weight:700;
@@ -393,21 +408,21 @@ box-shadow:0 0 25px rgba(255,0,0,.5);
 
 /* FOOTER */
 footer{
-padding:80px 20px;
+padding:90px 20px;
 text-align:center;
-border-top:1px solid rgba(255,255,255,.08);
 background:#050505;
+border-top:1px solid rgba(255,255,255,.08);
 }
 
 footer h2{
 font-family:'Cinzel',serif;
-font-size:42px;
+font-size:44px;
 color:var(--gold);
 margin-bottom:20px;
 }
 
 footer p{
-max-width:800px;
+max-width:850px;
 margin:auto;
 line-height:1.9;
 color:#aaa;
@@ -417,7 +432,7 @@ color:#aaa;
 @media(max-width:900px){
 
 .hero h1{
-font-size:70px;
+font-size:72px;
 }
 
 .hero h2{
@@ -437,11 +452,11 @@ display:none;
 @media(max-width:600px){
 
 .hero h1{
-font-size:50px;
+font-size:52px;
 }
 
 .hero h2{
-font-size:26px;
+font-size:24px;
 }
 
 .hero h4{
@@ -450,7 +465,7 @@ letter-spacing:4px;
 }
 
 .section-title h2{
-font-size:32px;
+font-size:34px;
 }
 
 .ticket-card{
@@ -459,6 +474,11 @@ padding:30px 25px;
 
 .price{
 font-size:34px;
+}
+
+.counter-btn{
+width:50px;
+height:50px;
 }
 
 }
@@ -495,12 +515,12 @@ font-size:34px;
 
 <h1>WESTLIFE</h1>
 
-<h2>THE ANNIVERSARY WORLD TOUR 2027</h2>
+<h2>THE ANNIVERSARY WORLD TOUR</h2>
 
 <p>
-Saturday, 23 January 2027 — Gelora Bung Karno Main Stadium.
-Experience the legendary concert night with cinematic visuals,
-nostalgic moments, world-class stage production and unforgettable memories.
+23 January 2027 — Gelora Bung Karno Main Stadium.
+Experience the biggest nostalgia concert with cinematic visuals,
+legendary hits, world-class production and unforgettable moments.
 </p>
 
 <div class="hero-buttons">
@@ -509,8 +529,8 @@ nostalgic moments, world-class stage production and unforgettable memories.
 BUY TICKETS
 </a>
 
-<a href="https://fforeverindonesia-svg.github.io/DESKRIPSI-2/" class="btn btn-outline">
-EVENT DETAILS
+<a href="https://fforeverindonesia-svg.github.io/FROM-PEMBELIAN-WESTLIFE/" class="btn btn-gold">
+ORDER NOW
 </a>
 
 </div>
@@ -527,13 +547,9 @@ EVENT DETAILS
 <p>WESTLIFE Indonesia 2027 Ticket Categories</p>
 </div>
 
-<div class="layout-container">
-
 <div class="layout-box">
 
 <img src="https://i.imgur.com/TuK9m5A.jpeg" alt="WESTLIFE Layout">
-
-</div>
 
 </div>
 
@@ -544,7 +560,7 @@ EVENT DETAILS
 
 <div class="section-title">
 <h2>TICKET CATEGORY</h2>
-<p>All ticket buttons are active and ready</p>
+<p>Choose your best seat experience</p>
 </div>
 
 <div class="ticket-grid">
@@ -556,9 +572,7 @@ EVENT DETAILS
 
 <h3>VIP PACKAGE</h3>
 
-<div class="price">
-IDR 2.750.000
-</div>
+<div class="price">IDR 2.750.000</div>
 
 <ul>
 <li>✓ VIP Seated Ticket</li>
@@ -568,7 +582,13 @@ IDR 2.750.000
 <li>✓ Exclusive Photocard</li>
 </ul>
 
-<a href="https://fforeverindonesia-svg.github.io/DESKRIPSI-2/" class="btn btn-gold">
+<div class="counter-box">
+<button class="counter-btn minus">−</button>
+<div class="counter-number">1</div>
+<button class="counter-btn plus">+</button>
+</div>
+
+<a href="https://fforeverindonesia-svg.github.io/FROM-PEMBELIAN-WESTLIFE/" class="btn btn-gold">
 GET VIP
 </a>
 
@@ -579,17 +599,21 @@ GET VIP
 
 <h3>CAT 1 A & B</h3>
 
-<div class="price">
-IDR 2.500.000
-</div>
+<div class="price">IDR 2.500.000</div>
 
 <ul>
 <li>✓ Premium Seating</li>
-<li>✓ Best View Experience</li>
+<li>✓ Best Stage View</li>
 <li>✓ Official Access</li>
 </ul>
 
-<a href="https://fforeverindonesia-svg.github.io/DESKRIPSI-2/" class="btn btn-gold">
+<div class="counter-box">
+<button class="counter-btn minus">−</button>
+<div class="counter-number">1</div>
+<button class="counter-btn plus">+</button>
+</div>
+
+<a href="https://fforeverindonesia-svg.github.io/FROM-PEMBELIAN-WESTLIFE/" class="btn btn-gold">
 BUY NOW
 </a>
 
@@ -600,9 +624,7 @@ BUY NOW
 
 <h3>CAT 2 A & B</h3>
 
-<div class="price">
-IDR 2.250.000
-</div>
+<div class="price">IDR 2.250.000</div>
 
 <ul>
 <li>✓ Excellent Visibility</li>
@@ -610,7 +632,13 @@ IDR 2.250.000
 <li>✓ Official Access</li>
 </ul>
 
-<a href="https://fforeverindonesia-svg.github.io/DESKRIPSI-2/" class="btn btn-gold">
+<div class="counter-box">
+<button class="counter-btn minus">−</button>
+<div class="counter-number">1</div>
+<button class="counter-btn plus">+</button>
+</div>
+
+<a href="https://fforeverindonesia-svg.github.io/FROM-PEMBELIAN-WESTLIFE/" class="btn btn-gold">
 BUY NOW
 </a>
 
@@ -621,9 +649,7 @@ BUY NOW
 
 <h3>CAT 3 A & B</h3>
 
-<div class="price">
-IDR 1.850.000
-</div>
+<div class="price">IDR 1.850.000</div>
 
 <ul>
 <li>✓ Great Concert Experience</li>
@@ -631,7 +657,13 @@ IDR 1.850.000
 <li>✓ Crowd Atmosphere</li>
 </ul>
 
-<a href="https://fforeverindonesia-svg.github.io/DESKRIPSI-2/" class="btn btn-gold">
+<div class="counter-box">
+<button class="counter-btn minus">−</button>
+<div class="counter-number">1</div>
+<button class="counter-btn plus">+</button>
+</div>
+
+<a href="https://fforeverindonesia-svg.github.io/FROM-PEMBELIAN-WESTLIFE/" class="btn btn-gold">
 BUY NOW
 </a>
 
@@ -642,16 +674,20 @@ BUY NOW
 
 <h3>CAT 4 A & B</h3>
 
-<div class="price">
-IDR 1.450.000
-</div>
+<div class="price">IDR 1.450.000</div>
 
 <ul>
 <li>✓ Side View Seating</li>
 <li>✓ Limited Availability</li>
 </ul>
 
-<a href="https://fforeverindonesia-svg.github.io/DESKRIPSI-2/" class="btn btn-gold">
+<div class="counter-box">
+<button class="counter-btn minus">−</button>
+<div class="counter-number">1</div>
+<button class="counter-btn plus">+</button>
+</div>
+
+<a href="https://fforeverindonesia-svg.github.io/FROM-PEMBELIAN-WESTLIFE/" class="btn btn-gold">
 BUY NOW
 </a>
 
@@ -662,16 +698,20 @@ BUY NOW
 
 <h3>CAT 5 A & B</h3>
 
-<div class="price">
-IDR 1.250.000
-</div>
+<div class="price">IDR 1.250.000</div>
 
 <ul>
 <li>✓ Festival Atmosphere</li>
 <li>✓ Official Seating</li>
 </ul>
 
-<a href="https://fforeverindonesia-svg.github.io/DESKRIPSI-2/" class="btn btn-gold">
+<div class="counter-box">
+<button class="counter-btn minus">−</button>
+<div class="counter-number">1</div>
+<button class="counter-btn plus">+</button>
+</div>
+
+<a href="https://fforeverindonesia-svg.github.io/FROM-PEMBELIAN-WESTLIFE/" class="btn btn-gold">
 BUY NOW
 </a>
 
@@ -682,16 +722,20 @@ BUY NOW
 
 <h3>CAT 6 A & B</h3>
 
-<div class="price">
-IDR 850.000
-</div>
+<div class="price">IDR 850.000</div>
 
 <ul>
 <li>✓ Budget Friendly</li>
 <li>✓ Official Access</li>
 </ul>
 
-<a href="https://fforeverindonesia-svg.github.io/DESKRIPSI-2/" class="btn btn-gold">
+<div class="counter-box">
+<button class="counter-btn minus">−</button>
+<div class="counter-number">1</div>
+<button class="counter-btn plus">+</button>
+</div>
+
+<a href="https://fforeverindonesia-svg.github.io/FROM-PEMBELIAN-WESTLIFE/" class="btn btn-gold">
 BUY NOW
 </a>
 
@@ -708,7 +752,7 @@ BUY NOW
 
 <p>
 25 Years of Hits. One Legendary Night.
-Join thousands of fans in the biggest nostalgia concert experience of the year.
+Join thousands of fans in the most spectacular nostalgia concert experience of the year.
 </p>
 
 </footer>
@@ -718,7 +762,7 @@ Join thousands of fans in the biggest nostalgia concert experience of the year.
 /* PARTICLES */
 const particles = document.getElementById('particles');
 
-for(let i=0;i<180;i++){
+for(let i=0;i<200;i++){
 
 const span = document.createElement('span');
 
@@ -732,54 +776,73 @@ particles.appendChild(span);
 
 }
 
-/* NAVBAR EFFECT */
+/* NAV EFFECT */
 window.addEventListener('scroll',()=>{
 
-const nav = document.querySelector('nav');
+const nav=document.querySelector('nav');
 
-if(window.scrollY > 50){
+if(window.scrollY>50){
 
-nav.style.background = 'rgba(0,0,0,.9)';
+nav.style.background='rgba(0,0,0,.92)';
 
 }else{
 
-nav.style.background = 'rgba(0,0,0,.35)';
+nav.style.background='rgba(0,0,0,.35)';
 
 }
+
+});
+
+/* COUNTER SYSTEM */
+const cards = document.querySelectorAll('.ticket-card');
+
+cards.forEach(card=>{
+
+const minus = card.querySelector('.minus');
+const plus = card.querySelector('.plus');
+const number = card.querySelector('.counter-number');
+
+let count = 1;
+
+plus.addEventListener('click',()=>{
+
+if(count < 10){
+
+count++;
+number.innerText = count;
+
+}
+
+});
+
+minus.addEventListener('click',()=>{
+
+if(count > 1){
+
+count--;
+number.innerText = count;
+
+}
+
+});
 
 });
 
 /* CARD ANIMATION */
-const cards = document.querySelectorAll('.ticket-card');
-
 cards.forEach((card,index)=>{
 
-card.style.animation = `fadeCard 1s ease ${index*0.1}s forwards`;
-card.style.opacity = 0;
+card.style.opacity='0';
+card.style.transform='translateY(50px)';
+
+setTimeout(()=>{
+
+card.style.transition='1s';
+card.style.opacity='1';
+card.style.transform='translateY(0)';
+
+},index*150);
 
 });
-
-const style = document.createElement('style');
-
-style.innerHTML = `
-
-@keyframes fadeCard{
-
-from{
-opacity:0;
-transform:translateY(50px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-`;
-
-document.head.appendChild(style);
 
 </script>
 
